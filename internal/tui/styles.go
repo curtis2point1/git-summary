@@ -203,5 +203,5 @@ func logo() string {
 
 // Simpler logo for compact mode
 func compactLogo() string {
-	return titleStyle.Render(" 🔍 git-scope ")
+	return titleStyle.Render(" 🔍 git-summary ")
 }

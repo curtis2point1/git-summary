@@ -4,11 +4,11 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/Bharath-code/git-scope/internal/cache"
-	"github.com/Bharath-code/git-scope/internal/config"
-	"github.com/Bharath-code/git-scope/internal/model"
-	"github.com/Bharath-code/git-scope/internal/scan"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/curtis2point1/git-summary/internal/cache"
+	"github.com/curtis2point1/git-summary/internal/config"
+	"github.com/curtis2point1/git-summary/internal/model"
+	"github.com/curtis2point1/git-summary/internal/scan"
 )
 
 // Cache max age - use cached data if less than 5 minutes old

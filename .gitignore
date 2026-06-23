@@ -2,7 +2,7 @@
 /dist
 /build
 /bin
-/git-scope
+/git-summary
 
 # Logs and temp files
 *.log
@@ -11,7 +11,7 @@
 *~
 
 # Cache
-.git-scope-cache.json
+.git-summary-cache.json
 
 # IDE
 .idea/
@@ -25,9 +25,8 @@ Thumbs.db
 /materials
 demo.gif
 demo.tape
-git-scope
-git-scope-test
-git-scope-final
+git-summary-test
+git-summary-final
 docs/images/fallback_pic
 docs/images/mobile
 docs/images/desktop 

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Bharath-code/git-scope/internal/model"
+	"github.com/curtis2point1/git-summary/internal/model"
 )
 
 // ContributionData holds commit counts per day for the heatmap

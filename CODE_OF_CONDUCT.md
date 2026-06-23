@@ -23,7 +23,7 @@ We as members, contributors, and leaders pledge to make participation in our com
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainer at [kumarbharath63@gmail.com]. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainer through GitHub. All complaints will be reviewed and investigated promptly and fairly.
 
 ## Attribution
 

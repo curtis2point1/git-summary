@@ -1,5 +1,5 @@
-# Git-Scope Configuration
-# Copy this file to ~/.config/git-scope/config.yml
+# Git-Summary Configuration
+# Copy this file to ~/.config/git-summary/config.yml
 
 # Root directories to scan for git repositories
 roots:

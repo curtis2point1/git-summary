@@ -18,7 +18,7 @@ type Config struct {
 }
 
 // defaultConfig returns sensible defaults
-// By default, scan the current directory so git-scope works out of the box
+// By default, scan the current directory so git-summary works out of the box
 func defaultConfig() *Config {
 	// Get current working directory as default root
 	cwd, err := os.Getwd()
@@ -102,7 +102,7 @@ func DefaultConfigPath() string {
 	if err != nil {
 		return "./config.yml"
 	}
-	return filepath.Join(home, ".config", "git-scope", "config.yml")
+	return filepath.Join(home, ".config", "git-summary", "config.yml")
 }
 
 // ConfigExists checks if a config file exists at the given path
@@ -139,7 +139,7 @@ func CreateConfig(path string, roots []string, editor string) error {
 	}
 
 	// Add header comment
-	content := "# git-scope configuration\n# Edit this file to customize scanning behavior\n\n" + string(data)
+	content := "# git-summary configuration\n# Edit this file to customize scanning behavior\n\n" + string(data)
 
 	if err := os.WriteFile(path, []byte(content), 0644); err != nil {
 		return fmt.Errorf("write config: %w", err)

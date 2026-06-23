@@ -8,6 +8,6 @@ sips -s format jpeg -Z 800 docs/images/feature-stats.png --out docs/images/featu
 
 # Resize Hero image (Use WebP source -> Output 800px JPEG)
 echo "Optimizing hero image (WebP -> JPEG)..."
-sips -s format jpeg -Z 800 docs/git-scope-demo-1.webp --out docs/git-scope-demo-mobile-1.jpg
+sips -s format jpeg -Z 800 docs/git-summary-demo-1.webp --out docs/git-summary-demo-mobile-1.jpg
 
 echo "✅ Optimization complete. Generated mobile-optimized JPEGs (800px)."

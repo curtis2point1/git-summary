@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/Bharath-code/git-scope/internal/model"
+	"github.com/curtis2point1/git-summary/internal/model"
 )
 
 // CacheData represents the cached scan results
@@ -42,7 +42,7 @@ func getCachePath() string {
 	if err != nil {
 		return ""
 	}
-	return filepath.Join(home, ".cache", "git-scope", "repos.json")
+	return filepath.Join(home, ".cache", "git-summary", "repos.json")
 }
 
 // Load reads cached data from disk

@@ -1,14 +1,13 @@
-# git-scope
+# git-summary
 
 > **A fast TUI dashboard to view the git status of *all your repositories* in one place.** > Stop the `cd` → `git status` loop.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/Bharath-code/git-scope)](https://goreportcard.com/report/github.com/Bharath-code/git-scope)
-[![GitHub Release](https://img.shields.io/github/v/release/Bharath-code/git-scope?color=8B5CF6)](https://github.com/Bharath-code/git-scope/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/curtis2point1/git-summary)](https://goreportcard.com/report/github.com/curtis2point1/git-summary)
+[![GitHub Release](https://img.shields.io/github/v/release/curtis2point1/git-summary?color=8B5CF6)](https://github.com/curtis2point1/git-summary/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/Bharath-code/git-scope)](https://github.com/Bharath-code/git-scope/stargazers)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/iam_pbk)
+[![GitHub stars](https://img.shields.io/github/stars/curtis2point1/git-summary)](https://github.com/curtis2point1/git-summary/stargazers)
 
-![git-scope Demo](docs/git-scope-demo-1.webp)
+![git-summary Demo](docs/git-summary-demo-1.webp)
 
 ---
 
@@ -18,22 +17,22 @@ Get started in seconds.
 
 ### Homebrew (macOS/Linux)
 ```bash
-brew tap Bharath-code/tap && brew install git-scope
+brew tap curtis2point1/tap && brew install git-summary
 ````
 ### Update
 ```bash
-brew upgrade git-scope
+brew upgrade git-summary
 ````
 
 ### Universal Installer (macOS/Linux)
 ```bash
-curl -sSL https://raw.githubusercontent.com/Bharath-code/git-scope/main/scripts/install.sh | sh
+curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh
 ```
 
 ### From Source (Windows)
 
 ```bash
-go install github.com/Bharath-code/git-scope/cmd/git-scope@latest
+go install github.com/curtis2point1/git-summary/cmd/git-summary@latest
 ```
 
 *If you find this useful, please consider giving it a ⭐ star to help others find it\!*
@@ -45,30 +44,30 @@ go install github.com/Bharath-code/git-scope/cmd/git-scope@latest
 Simply run it in any directory containing your projects:
 
 ```bash
-git-scope
+git-summary
 ```
 
 #### Commands
 ```bash
-git-scope              # Launch TUI dashboard
-git-scope init         # Create config file interactively
-git-scope scan         # Scan and print repos (JSON)
-git-scope scan-all     # Full system scan from home directory
-git-scope issue        # Open GitHub issues page in browser
-git-scope -h           # Show help
+git-summary              # Launch TUI dashboard
+git-summary init         # Create config file interactively
+git-summary scan         # Scan and print repos (JSON)
+git-summary scan-all     # Full system scan from home directory
+git-summary issue        # Open GitHub issues page in browser
+git-summary -h           # Show help
 ```
 
 *By default, it recursively scans the current directory. You can configure permanent root paths later.*
 
 -----
 
-## 🆚 git-scope vs. lazygit
+## 🆚 git-summary vs. lazygit
 
 
-  * **git-scope** is for your **workspace** (bird's-eye view).
+  * **git-summary** is for your **workspace** (bird's-eye view).
   * **lazygit** is for a specific **repository** (deep dive).
 
-| Feature | **git-scope** | **lazygit** |
+| Feature | **git-summary** | **lazygit** |
 | :--- | :--- | :--- |
 | **Scope** | **All repos at once** | One repo at a time |
 | **Primary Goal** | Find what needs attention | Stage/Commit/Diff |
@@ -116,11 +115,11 @@ git-scope -h           # Show help
 
 ## ⚙️ Configuration
 
-Edit workspace location and code editor of your choice in `~/.config/git-scope/config.yml`:
+Edit workspace location and code editor of your choice in `~/.config/git-summary/config.yml`:
 
 
 ```yaml
-# ~/.config/git-scope/config.yml
+# ~/.config/git-summary/config.yml
 roots:
   - ~/code
   - ~/work/microservices
@@ -148,7 +147,7 @@ cd ../repo-2 && git status
 # ... repeat for 20 repos
 ```
 
-I built `git-scope` to solve the **"Multi-Repo Blindness"** problem. It gives me a single screen to see what is dirty, what is ahead/behind, and where I left off yesterday.
+`git-summary` helps solve the **"Multi-Repo Blindness"** problem. It gives you a single screen to see what is dirty, what is ahead/behind, and where you left off yesterday.
 
 -----
 
@@ -163,7 +162,7 @@ I built `git-scope` to solve the **"Multi-Repo Blindness"** problem. It gives me
 
 ## 📄 License
 
-MIT © [Bharath-code](https://github.com/Bharath-code)
+MIT. This project is derived from [Bharath-code/git-scope](https://github.com/Bharath-code/git-scope), originally created by Bharath, and includes modifications by [curtis2point1](https://github.com/curtis2point1).
 
 ---
 
@@ -179,11 +178,11 @@ Built with these amazing open-source projects:
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#Bharath-code/git-scope&Date">
+<a href="https://star-history.com/#curtis2point1/git-summary&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Bharath-code/git-scope&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Bharath-code/git-scope&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Bharath-code/git-scope&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=curtis2point1/git-summary&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=curtis2point1/git-summary&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=curtis2point1/git-summary&type=Date" />
  </picture>
 </a>
 
@@ -191,8 +190,8 @@ Built with these amazing open-source projects:
 
 ## 👥 Contributors
 
-<a href="https://github.com/Bharath-code/git-scope/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Bharath-code/git-scope" />
+<a href="https://github.com/curtis2point1/git-summary/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=curtis2point1/git-summary" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

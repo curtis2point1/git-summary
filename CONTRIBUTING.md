@@ -1,4 +1,4 @@
-# Contributing to git-scope
+# Contributing to git-summary
 
 First off, thanks for taking the time to contribute! 🎉
 
@@ -29,14 +29,14 @@ Open an issue with the `enhancement` label. Describe:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/git-scope.git
-cd git-scope
+git clone https://github.com/YOUR_USERNAME/git-summary.git
+cd git-summary
 
 # Build
-go build -o git-scope ./cmd/git-scope
+go build -o git-summary ./cmd/git-summary
 
 # Run
-./git-scope
+./git-summary
 ```
 
 ## Code Style
@@ -47,6 +47,6 @@ go build -o git-scope ./cmd/git-scope
 
 ## Questions?
 
-Open a [Discussion](https://github.com/Bharath-code/git-scope/discussions) or reach out on [Twitter/X](https://x.com/iam_pbk).
+Open a [Discussion](https://github.com/curtis2point1/git-summary/discussions).
 
 Thanks again! 🙏

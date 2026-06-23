@@ -29,7 +29,7 @@ function trackEvent(eventName, title) {
 // COPY COMMAND
 // ===============================
 function copyInstallCommand() {
-    const command = "brew tap Bharath-code/tap && brew install git-scope";
+    const command = "brew tap curtis2point1/tap && brew install git-summary";
 
     // Fallback for non-secure contexts
     if (!navigator.clipboard) {
@@ -70,7 +70,7 @@ function showCopyFeedback() {
 }
 
 function copyScriptCommand() {
-    const command = "curl -sSL https://raw.githubusercontent.com/Bharath-code/git-scope/main/scripts/install.sh | sh";
+    const command = "curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh";
 
     // Fallback for non-secure contexts
     if (!navigator.clipboard) {

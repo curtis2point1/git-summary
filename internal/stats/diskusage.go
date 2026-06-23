@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/Bharath-code/git-scope/internal/model"
+	"github.com/curtis2point1/git-summary/internal/model"
 )
 
 // DiskUsageData holds disk usage information for all repos

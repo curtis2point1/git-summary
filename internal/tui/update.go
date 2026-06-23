@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/Bharath-code/git-scope/internal/browser"
-	"github.com/Bharath-code/git-scope/internal/model"
-	"github.com/Bharath-code/git-scope/internal/nudge"
-	"github.com/Bharath-code/git-scope/internal/scan"
-	"github.com/Bharath-code/git-scope/internal/stats"
-	"github.com/Bharath-code/git-scope/internal/workspace"
 	"github.com/charmbracelet/bubbles/spinner"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
+	"github.com/curtis2point1/git-summary/internal/browser"
+	"github.com/curtis2point1/git-summary/internal/model"
+	"github.com/curtis2point1/git-summary/internal/nudge"
+	"github.com/curtis2point1/git-summary/internal/scan"
+	"github.com/curtis2point1/git-summary/internal/stats"
+	"github.com/curtis2point1/git-summary/internal/workspace"
 	"mvdan.cc/sh/v3/shell"
 )
 
@@ -42,7 +42,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		// Show helpful message if no repos found
 		if len(msg.repos) == 0 {
-			m.statusMsg = "⚠️  No git repos found in configured directories. Press 'r' to rescan or run 'git-scope init' to configure."
+			m.statusMsg = "⚠️  No git repos found in configured directories. Press 'r' to rescan or run 'git-summary init' to configure."
 		} else if msg.fromCache {
 			m.statusMsg = fmt.Sprintf("✓ Loaded %d repos from cache", len(msg.repos))
 		} else {
@@ -278,9 +278,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				if err != nil || len(fields) == 0 {
 					m.statusMsg = fmt.Sprintf("❌ Invalid editor command: '%s'", m.cfg.Editor)
 				} else if _, err := exec.LookPath(fields[0]); err != nil {
-					m.statusMsg = fmt.Sprintf("❌ Editor '%s' not found in PATH. Install it or edit ~/.config/git-scope/config.yml", fields[0])
+					m.statusMsg = fmt.Sprintf("❌ Editor '%s' not found in PATH. Install it or edit ~/.config/git-summary/config.yml", fields[0])
 				} else {
-					m.statusMsg = fmt.Sprintf("✓ Editor: %s (edit config at ~/.config/git-scope/config.yml)", m.cfg.Editor)
+					m.statusMsg = fmt.Sprintf("✓ Editor: %s (edit config at ~/.config/git-summary/config.yml)", m.cfg.Editor)
 				}
 				return m, nil
 			}

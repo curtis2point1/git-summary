@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Build & Run Commands
 
 ```bash
-go build ./cmd/git-scope           # Build binary
-go run ./cmd/git-scope             # Run directly
+go build ./cmd/git-summary           # Build binary
+go run ./cmd/git-summary             # Run directly
 goreleaser release --clean         # Multi-platform release (CI uses this)
 ./scripts/install.sh               # Universal installer script
 ```
@@ -15,14 +15,14 @@ goreleaser release --clean         # Multi-platform release (CI uses this)
 
 ## Architecture
 
-**Entry point**: `cmd/git-scope/main.go` — CLI with 6 commands: default TUI, `scan`, `scan-all`, `init`, `issue`, `help`
+**Entry point**: `cmd/git-summary/main.go` — CLI with 6 commands: default TUI, `scan`, `scan-all`, `init`, `issue`, `help`
 
 **Package structure** (`internal/`):
 - `tui/` — Bubbletea TUI (model.go=state, update.go=events, view.go=render, styles.go=lipgloss)
 - `scan/` — Concurrent recursive repo discovery with ignore patterns
 - `gitstatus/` — Git CLI calls for branch/staged/unstaged/untracked counts
-- `config/` — YAML config at `~/.config/git-scope/config.yml`
-- `cache/` — 5-min file cache at `~/.cache/git-scope/cache.json`
+- `config/` — YAML config at `~/.config/git-summary/config.yml`
+- `cache/` — 5-min file cache at `~/.cache/git-summary/cache.json`
 - `stats/` — Analytics panels (contributions, timeline, diskusage)
 - `workspace/` — Hot-switch scan directories at runtime
 - `model/` — Repo/RepoStatus structs

@@ -5,14 +5,14 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Bharath-code/git-scope/internal/config"
-	"github.com/Bharath-code/git-scope/internal/model"
-	"github.com/Bharath-code/git-scope/internal/stats"
 	"github.com/charmbracelet/bubbles/spinner"
 	"github.com/charmbracelet/bubbles/table"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	"github.com/curtis2point1/git-summary/internal/config"
+	"github.com/curtis2point1/git-summary/internal/model"
+	"github.com/curtis2point1/git-summary/internal/stats"
 )
 
 // State represents the current UI state

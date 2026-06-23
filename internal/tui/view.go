@@ -83,10 +83,10 @@ func (m Model) renderError() string {
 	b.WriteString(subtitleStyle.Render("💡 Suggestions:"))
 	b.WriteString("\n")
 	b.WriteString(pathBulletStyle.Render("  → "))
-	b.WriteString(pathStyle.Render("Check your config at ~/.config/git-scope/config.yml"))
+	b.WriteString(pathStyle.Render("Check your config at ~/.config/git-summary/config.yml"))
 	b.WriteString("\n")
 	b.WriteString(pathBulletStyle.Render("  → "))
-	b.WriteString(pathStyle.Render("Run 'git-scope init' to reconfigure"))
+	b.WriteString(pathStyle.Render("Run 'git-summary init' to reconfigure"))
 	b.WriteString("\n")
 	b.WriteString(pathBulletStyle.Render("  → "))
 	b.WriteString(pathStyle.Render("Make sure git is installed and in PATH"))
@@ -103,7 +103,7 @@ func (m Model) renderDashboard() string {
 	var b strings.Builder
 
 	// Header with logo on its own line
-	logo := lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#A78BFA")).Render("git-scope")
+	logo := lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#A78BFA")).Render("git-summary")
 	version := lipgloss.NewStyle().Foreground(lipgloss.Color("#6B7280")).Render(" v1.3.0")
 	b.WriteString(logo + version)
 	b.WriteString("\n\n")
@@ -394,7 +394,7 @@ func (m Model) renderStarNudge() string {
 		Foreground(lipgloss.Color("#A78BFA")).
 		Bold(true)
 
-	message := nudgeStyle.Render("✨ If git-scope helped you stay in flow, a GitHub star helps others discover it.")
+	message := nudgeStyle.Render("✨ If git-summary helped you stay in flow, a GitHub star helps others discover it.")
 	cta := ctaStyle.Render(" (S) Open GitHub")
 
 	return message + cta

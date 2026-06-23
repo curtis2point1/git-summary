@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Bharath-code/git-scope/internal/gitstatus"
-	"github.com/Bharath-code/git-scope/internal/model"
+	"github.com/curtis2point1/git-summary/internal/gitstatus"
+	"github.com/curtis2point1/git-summary/internal/model"
 )
 
 // smartIgnorePatterns are always-ignored directories for performance

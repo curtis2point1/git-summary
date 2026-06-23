@@ -1,15 +1,15 @@
 #!/bin/sh
-# Git-Scope Installer Script
-# Usage: curl -sSL https://raw.githubusercontent.com/Bharath-code/git-scope/main/scripts/install.sh | sh
+# Git-Summary Installer Script
+# Usage: curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh
 #
 # This script detects your OS and architecture, downloads the appropriate
-# git-scope binary, and installs it to ~/.local/bin
+# git-summary binary, and installs it to ~/.local/bin
 
 set -e
 
-REPO="Bharath-code/git-scope"
+REPO="curtis2point1/git-summary"
 INSTALL_DIR="${HOME}/.local/bin"
-BINARY_NAME="git-scope"
+BINARY_NAME="git-summary"
 
 # Colors for output
 RED='\033[0;31m'
@@ -57,7 +57,7 @@ get_latest_version() {
 }
 
 main() {
-    info "Git-Scope Installer"
+    info "Git-Summary Installer"
     info "==================="
 
     OS=$(detect_os)
@@ -72,7 +72,7 @@ main() {
     info "Latest version: ${VERSION}"
 
     # Construct download URL
-    # Assumes release assets are named like: git-scope_1.2.0_linux_amd64.tar.gz
+    # Assumes release assets are named like: git-summary_1.2.0_linux_amd64.tar.gz
     ARCHIVE_NAME="${BINARY_NAME}_${VERSION#v}_${OS}_${ARCH}.tar.gz"
     DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE_NAME}"
 
@@ -116,7 +116,7 @@ main() {
         printf "\n  export PATH=\"\$HOME/.local/bin:\$PATH\"\n\n"
     fi
 
-    info "Installation complete! Run 'git-scope' to get started."
+    info "Installation complete! Run 'git-summary' to get started."
     printf "\n"
     ${INSTALL_DIR}/${BINARY_NAME} --version 2>/dev/null || true
 }

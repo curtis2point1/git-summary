@@ -1,4 +1,4 @@
-module github.com/Bharath-code/git-scope
+module github.com/curtis2point1/git-summary
 
 go 1.20
 

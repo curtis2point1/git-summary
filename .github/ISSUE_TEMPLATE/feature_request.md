@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for git-scope
+about: Suggest an idea for git-summary
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''

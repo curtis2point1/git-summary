@@ -1,16 +1,16 @@
-# GoReleaser configuration for git-scope
+# GoReleaser configuration for git-summary
 # Run: goreleaser release --clean
 
-project_name: git-scope
+project_name: git-summary
 
 before:
   hooks:
     - go mod tidy
 
 builds:
-  - id: git-scope
-    main: ./cmd/git-scope
-    binary: git-scope
+  - id: git-summary
+    main: ./cmd/git-summary
+    binary: git-summary
     env:
       - CGO_ENABLED=0
     goos:
@@ -41,15 +41,15 @@ changelog:
       - '^test:'
 
 brews:
-  - name: git-scope
+  - name: git-summary
     repository:
-      owner: Bharath-code
+      owner: curtis2point1
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    homepage: "https://github.com/Bharath-code/git-scope"
+    homepage: "https://github.com/curtis2point1/git-summary"
     description: "A fast TUI to see the status of all git repositories"
     license: "MIT"
     install: |
-      bin.install "git-scope"
+      bin.install "git-summary"
     test: |
-      system "#{bin}/git-scope", "help"
+      system "#{bin}/git-summary", "help"

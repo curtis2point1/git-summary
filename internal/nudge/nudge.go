@@ -10,7 +10,7 @@ import (
 const Version = "1.3.0"
 
 // GitHubRepoURL is the URL to open when user presses S
-const GitHubRepoURL = "https://github.com/Bharath-code/git-scope"
+const GitHubRepoURL = "https://github.com/curtis2point1/git-summary"
 
 // NudgeState represents the persistent state of the star nudge
 type NudgeState struct {
@@ -25,7 +25,7 @@ func getNudgePath() string {
 	if err != nil {
 		return ""
 	}
-	return filepath.Join(home, ".cache", "git-scope", "nudge.json")
+	return filepath.Join(home, ".cache", "git-summary", "nudge.json")
 }
 
 // loadState loads the nudge state from disk

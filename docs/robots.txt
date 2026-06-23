@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bharath-code.github.io/git-scope/sitemap.xml
+Sitemap: https://curtis2point1.github.io/git-summary/sitemap.xml
