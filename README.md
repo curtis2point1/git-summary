@@ -15,15 +15,6 @@
 
 Get started in seconds.
 
-### Homebrew (macOS/Linux)
-```bash
-brew tap curtis2point1/tap && brew install git-summary
-````
-### Update
-```bash
-brew upgrade git-summary
-````
-
 ### Universal Installer (macOS/Linux)
 ```bash
 curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh

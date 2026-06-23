@@ -25,50 +25,6 @@ function trackEvent(eventName, title) {
     }
 }
 
-// ===============================
-// COPY COMMAND
-// ===============================
-function copyInstallCommand() {
-    const command = "brew tap curtis2point1/tap && brew install git-summary";
-
-    // Fallback for non-secure contexts
-    if (!navigator.clipboard) {
-        const ta = document.createElement('textarea');
-        ta.value = command;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showCopyFeedback();
-        return;
-    }
-
-    navigator.clipboard.writeText(command).then(() => {
-        showCopyFeedback();
-        trackEvent('command-copied', 'Copied install command');
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
-}
-
-function showCopyFeedback() {
-    const icon = document.getElementById('copy-icon');
-    if (!icon) return;
-
-    const originalHTML = icon.innerHTML;
-
-    // Change to Checkmark
-    icon.innerHTML = '<polyline points="20 6 9 17 4 12"></polyline>';
-    icon.style.opacity = '1';
-    icon.style.color = '#27C93F'; // Green from theme
-
-    setTimeout(() => {
-        icon.innerHTML = originalHTML;
-        icon.style.opacity = '0.5';
-        icon.style.color = 'currentColor';
-    }, 2000);
-}
-
 function copyScriptCommand() {
     const command = "curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh";
 
@@ -123,7 +79,7 @@ document.getElementById('nav-github-link')?.addEventListener('click', () => {
 });
 
 document.getElementById('hero-install-options')?.addEventListener('click', () => {
-    trackEvent('install-options-click', 'Clicked View Windows/Linux Install');
+    trackEvent('install-options-click', 'Clicked View Windows & Go Install');
 });
 
 document.getElementById('hero-cta-star')?.addEventListener('click', () => {

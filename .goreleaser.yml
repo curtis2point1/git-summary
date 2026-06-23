@@ -39,17 +39,3 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
-
-brews:
-  - name: git-summary
-    repository:
-      owner: curtis2point1
-      name: homebrew-tap
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    homepage: "https://github.com/curtis2point1/git-summary"
-    description: "A fast TUI to see the status of all git repositories"
-    license: "MIT"
-    install: |
-      bin.install "git-summary"
-    test: |
-      system "#{bin}/git-summary", "help"
