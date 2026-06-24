@@ -15,7 +15,34 @@
 
 Get started in seconds.
 
+### From Local Source (macOS/Linux)
+
+Use this when working from a local checkout and Go is installed:
+
+```bash
+cd ~/dev/personal/git-summary
+git pull --ff-only
+mkdir -p "$HOME/.local/bin"
+go build -o "$HOME/.local/bin/git-summary" ./cmd/git-summary
+git-summary --version
+```
+
+Make sure `~/.local/bin` is on your `PATH`. For zsh:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+If `GOBIN` is set to `~/.local/bin`, this shorter command is equivalent:
+
+```bash
+go install ./cmd/git-summary
+```
+
 ### Universal Installer (macOS/Linux)
+
+This downloads the latest GitHub release binary and requires a published release.
+
 ```bash
 curl -sSL https://raw.githubusercontent.com/curtis2point1/git-summary/main/scripts/install.sh | sh
 ```
